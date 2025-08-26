@@ -1,18 +1,16 @@
-<!doctype html> 
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NINORA – Amazon-Erfolg. Einfach, klar, messbar.</title>
   <meta name="description" content="NINORA hilft Herstellern mit Listings, Amazon Ads und Operations.">
-  <link rel="icon" href="assets/images/logo.png">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <header>
   <div class="container nav">
     <div class="brand"><img src="assets/images/logo.png" alt="NINORA Logo" style="height:36px"></div>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
-    <nav id="main-nav" class="links" aria-label="Hauptnavigation">
+    <nav class="links" aria-label="Hauptnavigation">
       <a href="#leistungen" class="pill">Leistungen</a>
       <a href="#warum" class="pill">Warum NINORA</a>
       <a href="#ueber" class="pill">Über uns</a>
@@ -31,16 +29,8 @@
       <a class="btn light" href="NINORA_Profil.pdf" target="_blank" rel="noopener">Unternehmensprofil (PDF)</a>
     </div>
     <div style="margin-top:30px">
-      <div class="hero-mock"></div>
-  <div
-    style="
-      border:1px solid #e5e5ea;
-      border-radius:20px;
-      background:#fff url('/assets/images/hero-mock.png?v=4') center bottom / 180% auto no-repeat;
-      min-height:420px;
-    ">
-  </div>
-</div>
+      <img src="assets/images/hero-mock.svg" alt="Mockup Amazon-Listing auf MacBook & iPhone mit Produkt-Overlay" style="max-width:100%;height:auto;border-radius:20px;border:1px solid var(--line)">
+    </div>
     <div class="features">
       <div class="card">
         <img class="icon" src="assets/images/icon-content.svg" alt="Icon Content">
@@ -114,16 +104,5 @@
 </main>
 
 <footer><div class="container">© 2025 NINORA</div></footer>
-
-<script>
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.getElementById('main-nav');
-  if (btn && nav) {
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-</script>
 </body>
 </html>
