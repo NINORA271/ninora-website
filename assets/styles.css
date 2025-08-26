@@ -44,7 +44,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
   --btn:#1d1d1f; --btn-text:#ffffff; --brand:#0071e3;
 }
 
-/* … dein bestehendes CSS … */
+/* … dein bestehendes CSS … */ 
 
 .hero-mock {
   border: 1px solid var(--line);
