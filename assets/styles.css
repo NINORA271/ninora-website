@@ -50,29 +50,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
 .hero-mock {
   border: 1px solid var(--line);
   border-radius: 20px;
+  /* PNG benutzen + „zoomen“ */
   background: #fff url("images/hero-mock.png?v=2") center bottom / 160% auto no-repeat;
   min-height: clamp(380px, 62vw, 760px);
 }
 
-@media (max-width: 768px) {
-  .hero-mock {
-    background-size: 200% auto;
-    min-height: clamp(300px, 66vw, 560px);
-  }
-}
-
-/* auf schmalen Screens noch größer „zoomen“ */
-@media (max-width: 768px) {
-  .hero-mock {
-    background-size: 180% auto;
-    min-height: clamp(280px, 64vw, 520px);
-  }
-}
-
-
-/* Mobile Tweaks … (deine Blöcke bleiben so, wie du sie eingefügt hast) */
-
-/* ===== Mobile Tweaks (unterhalb deiner bisherigen Regeln einfügen) ===== */
+/* Mobile Tweaks NUR EINMAL definieren */
 @media (max-width: 768px) {
   .container { padding: 0 18px; }
 
@@ -81,21 +64,27 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
   .lead { font-size: 16px; }
 
   .actions { gap: 10px; }
-  .btn { width: 100%; padding: 14px 18px; } /* große Daumen-Ziele */
+  .btn { width: 100%; padding: 14px 18px; }
 
   .features { grid-template-columns: 1fr; gap: 12px; }
   .card { padding: 16px; border-radius: 14px; }
 
-  .two { grid-template-columns: 1fr; gap: 18px; } /* 2-Spalten-Bereich stacken */
+  .two { grid-template-columns: 1fr; gap: 18px; }
+
+  /* Hero auf Mobile größer und etwas niedriger */
+  .hero-mock {
+    background-size: 200% auto;
+    min-height: clamp(300px, 66vw, 560px);
+  }
 }
 
-/* Hero-Mockup Höhe auf sehr kleinen Screens etwas reduzieren */
 @media (max-width: 480px) {
   .hero-mock {
-    min-height: clamp(220px, 58vw, 420px);
+    min-height: clamp(240px, 64vw, 480px);
     border-radius: 16px;
   }
 }
+
 
 /* iOS Safe Area (z. B. Gestenleiste) */
 @supports (padding: max(0px)) {
