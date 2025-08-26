@@ -1,1 +1,6 @@
-
+.hero-mock {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff url("assets/images/hero-mock.png") center / contain no-repeat;
+  min-height: clamp(260px, 52vw, 560px);
+}
