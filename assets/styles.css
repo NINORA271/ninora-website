@@ -52,3 +52,55 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
   background: #fff url("images/hero-mock.png") center / cover no-repeat;
   min-height: clamp(260px, 52vw, 560px);
 }
+/* ===== Mobile Tweaks (unterhalb deiner bisherigen Regeln einfügen) ===== */
+@media (max-width: 768px) {
+  .container { padding: 0 18px; }
+
+  .hero { padding: 64px 0 28px; }
+  h1 { font-size: clamp(34px, 8vw, 44px); }
+  .lead { font-size: 16px; }
+
+  .actions { gap: 10px; }
+  .btn { width: 100%; padding: 14px 18px; } /* große Daumen-Ziele */
+
+  .features { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 16px; border-radius: 14px; }
+
+  .two { grid-template-columns: 1fr; gap: 18px; } /* 2-Spalten-Bereich stacken */
+}
+
+/* Hero-Mockup Höhe auf sehr kleinen Screens etwas reduzieren */
+@media (max-width: 480px) {
+  .hero-mock {
+    min-height: clamp(220px, 58vw, 420px);
+    border-radius: 16px;
+  }
+}
+
+/* iOS Safe Area (z. B. Gestenleiste) */
+@supports (padding: max(0px)) {
+  body { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+}
+
+/* ===== Mobile Navigation ===== */
+.nav-toggle { display:none; }
+
+@media (max-width: 880px) {
+  .nav { gap: 10px; flex-wrap: wrap; }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 42px; height: 42px;
+    border: 1px solid var(--line);
+    border-radius: 10px; background:#fff; font-size:22px; line-height:1;
+  }
+  .links { 
+    display: none; 
+    flex-direction: column; 
+    gap: 8px; 
+    width: 100%;
+    margin-top: 10px;
+  }
+  .links a { display:block; text-align:center; padding:12px 14px; }
+  .links.open { display: flex; }
+}
