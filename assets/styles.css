@@ -38,3 +38,11 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
 @media(max-width:960px){.two{grid-template-columns:1fr}}
 /* Footer */
 footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:14px}
+:root { --line: #e5e5ea; }
+
+.hero-mock {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff url("assets/images/hero-mock.png") center / cover no-repeat;
+  min-height: clamp(260px, 52vw, 560px);
+}
