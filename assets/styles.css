@@ -54,7 +54,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
   background: #fff url("/assets/images/hero-mock.png?v=3") center bottom / 160% auto no-repeat;
   min-height: clamp(380px, 62vw, 760px);
 }
-
+/* Debug – wieder rauslöschen wenn getestet */
+.hero-mock {
+  background-color: #fdd;
+}
 /* Mobile Tweaks NUR EINMAL definieren */
 @media (max-width: 768px) {
   .container { padding: 0 18px; }
