@@ -10,7 +10,8 @@
 <header>
   <div class="container nav">
     <div class="brand"><img src="assets/images/logo.png" alt="NINORA Logo" style="height:36px"></div>
-    <nav class="links" aria-label="Hauptnavigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav" class="links" aria-label="Hauptnavigation">
       <a href="#leistungen" class="pill">Leistungen</a>
       <a href="#warum" class="pill">Warum NINORA</a>
       <a href="#ueber" class="pill">Über uns</a>
@@ -106,3 +107,13 @@
 <footer><div class="container">© 2025 NINORA</div></footer>
 </body>
 </html>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('main-nav');
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+</script>
