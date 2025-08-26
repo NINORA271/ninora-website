@@ -39,20 +39,17 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
 /* Footer */
 footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:14px}
 
-:root{
   --bg:#ffffff; --ink:#0a0a0a; --muted:#6e6e73; --line:#e5e5ea;
   --btn:#1d1d1f; --btn-text:#ffffff; --brand:#0071e3;
 }
-
-/* dein restliches CSS … */
 
 /* === Hero: großes PNG-Mockup (dein Bild) === */
 .hero-mock {
   border: 1px solid var(--line);
   border-radius: 20px;
-  /* PNG benutzen + „zoomen“ */
   background: #fff url("/assets/images/hero-mock.png?v=3") center bottom / 160% auto no-repeat;
   min-height: clamp(380px, 62vw, 760px);
+}
 
 /* Mobile Tweaks NUR EINMAL definieren */
 @media (max-width: 768px) {
@@ -75,6 +72,32 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
     background-size: 200% auto;
     min-height: clamp(300px, 66vw, 560px);
   }
+}
+
+@media (max-width: 480px) {
+  .hero-mock {
+    min-height: clamp(240px, 64vw, 480px);
+    border-radius: 16px;
+  }
+}
+
+/* iOS Safe Area */
+@supports (padding: max(0px)) {
+  body { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+}
+
+/* ===== Mobile Navigation ===== */
+.nav-toggle { display:none; }
+@media (max-width: 880px) {
+  .nav { gap: 10px; flex-wrap: wrap; }
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px; border: 1px solid var(--line);
+    border-radius: 10px; background:#fff; font-size:22px; line-height:1;
+  }
+  .links { display:none; flex-direction:column; gap:8px; width:100%; margin-top:10px; }
+  .links a { display:block; text-align:center; padding:12px 14px; }
+  .links.open { display:flex; }
 }
 
 @media (max-width: 480px) {
