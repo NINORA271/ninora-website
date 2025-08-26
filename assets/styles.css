@@ -48,7 +48,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
 .hero-mock {
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: #fff url("/assets/images/hero-mock.png?v=3") center bottom / 160% auto no-repeat;
+  background: #fff url("assets/images/hero-mock.png?v=3")) center bottom / 160% auto no-repeat;
   min-height: clamp(380px, 62vw, 760px);
 }
 
