@@ -46,14 +46,19 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
 
 /* dein restliches CSS … */
 
-/* === Hero: großes SVG-Mockup === */
+/* === Hero: großes PNG-Mockup (dein Bild) === */
 .hero-mock {
   border: 1px solid var(--line);
   border-radius: 20px;
-  /* WICHTIG: SVG statt PNG, größere Background-Size */
-  background: #fff url("images/hero-mock.png") center bottom / 140% auto no-repeat;
-  /* mehr Höhe, damit das Motiv Platz hat */
-  min-height: clamp(340px, 60vw, 680px);
+  background: #fff url("images/hero-mock.png?v=2") center bottom / 160% auto no-repeat;
+  min-height: clamp(380px, 62vw, 760px);
+}
+
+@media (max-width: 768px) {
+  .hero-mock {
+    background-size: 200% auto;
+    min-height: clamp(300px, 66vw, 560px);
+  }
 }
 
 /* auf schmalen Screens noch größer „zoomen“ */
