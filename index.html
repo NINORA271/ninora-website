@@ -21,13 +21,25 @@
     </button>
 
     <!-- Navigationslinks -->
-    <nav id="main-nav" class="links" aria-label="Hauptnavigation">
-      <a href="#leistungen" class="pill">Leistungen</a>
-      <a href="#warum" class="pill">Warum NINORA</a>
-      <a href="#ueber" class="pill">Über uns</a>
-      <a href="#kontakt" class="pill">Kontakt</a>
-      <a href="#kontakt" class="pill">Jetzt anfragen</a>
-    </nav>
+  <nav id="main-nav" class="links" aria-label="Hauptnavigation">
+  <a href="#leistungen" class="pill">Leistungen</a>
+  <a href="#warum" class="pill">Warum NINORA</a>
+
+  <!-- Dropdown: Unternehmen -->
+  <div class="menu-group">
+    <button class="pill menu-trigger" aria-expanded="false" aria-controls="menu-unternehmen">
+      Unternehmen ▾
+    </button>
+    <div id="menu-unternehmen" class="submenu" role="menu">
+      <a role="menuitem" href="#ueber">Über uns</a>
+      <a role="menuitem" href="#karriere">Karriere</a>
+      <a role="menuitem" href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+
+  <a href="#kontakt" class="pill accent">Jetzt anfragen</a>
+</nav>
+
   </div>
 </header>
 
@@ -245,5 +257,31 @@
     });
   })();
 </script>
+  
+<script>
+  // Dropdown "Unternehmen"
+  (function() {
+    const trigger = document.querySelector('.menu-trigger');
+    const menu = document.getElementById('menu-unternehmen');
+    if (!trigger || !menu) return;
+
+    function close() {
+      menu.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !e.target.closest('.menu-group')) close();
+    });
+    // Tastatur
+    trigger.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    menu.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+</script>
+
 </body>
 </html>
