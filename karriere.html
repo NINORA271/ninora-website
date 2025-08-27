@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<a href="kontakt.html" class="pill accent">Jetzt anfragen</a>
+<a href="kontakt.html" class="pill">Jetzt anfragen</a>
 
 </nav>
 
@@ -36,54 +36,7 @@
 
 
 
-  <script>
-  (function () {
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('main-nav');
-    if (!btn || !nav) return;
-
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.classList.toggle('no-scroll', open);
-    });
-
-    // Klick außerhalb schließt Menü
-    document.addEventListener('click', (e) => {
-      if (!nav.classList.contains('open')) return;
-      if (e.target.closest('.nav') == null) {
-        nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
-      }
-    });
-  })();
-</script>
-  
-<script>
-  // Dropdown "Unternehmen"
-  (function() {
-    const trigger = document.querySelector('.menu-trigger');
-    const menu = document.getElementById('menu-unternehmen');
-    if (!trigger || !menu) return;
-
-    function close() {
-      menu.classList.remove('open');
-      trigger.setAttribute('aria-expanded', 'false');
-    }
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const open = menu.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('click', (e) => {
-      if (menu.classList.contains('open') && !e.target.closest('.menu-group')) close();
-    });
-    // Tastatur
-    trigger.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-    menu.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-  })();
-</script>
+ 
 
 <!doctype html>
 <html lang="de">
@@ -147,6 +100,55 @@
   <div class="container footer-copy">© 2025 NINORA</div>
 </footer>
 
+ <script>
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('no-scroll', open);
+    });
+
+    // Klick außerhalb schließt Menü
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('open')) return;
+      if (e.target.closest('.nav') == null) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  })();
+</script>
+  
+<script>
+  // Dropdown "Unternehmen"
+  (function() {
+    const trigger = document.querySelector('.menu-trigger');
+    const menu = document.getElementById('menu-unternehmen');
+    if (!trigger || !menu) return;
+
+    function close() {
+      menu.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !e.target.closest('.menu-group')) close();
+    });
+    // Tastatur
+    trigger.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    menu.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+</script>
+ 
 </body>
 </html>
 
