@@ -8,3 +8,54 @@ Statische Auslieferung; technische Logdaten (IP, Zeitstempel, URL, User-Agent) z
 Derzeit keine nicht-notwendigen Cookies/Tracker. Bei künftigem Einsatz (z. B. Analytics) Consent-Banner und Aktualisierung der Erklärung.
 
 Stand: 26.08.2025</pre></div><p class='small' style='margin-top:10px'><a href='index.html'>Zurück</a></p></main><footer><div class='container'>© 2025 NINORA</div></footer></body></html>
+
+</footer>
+
+  <script>
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('no-scroll', open);
+    });
+
+    // Klick außerhalb schließt Menü
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('open')) return;
+      if (e.target.closest('.nav') == null) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  })();
+</script>
+  
+<script>
+  // Dropdown "Unternehmen"
+  (function() {
+    const trigger = document.querySelector('.menu-trigger');
+    const menu = document.getElementById('menu-unternehmen');
+    if (!trigger || !menu) return;
+
+    function close() {
+      menu.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !e.target.closest('.menu-group')) close();
+    });
+    // Tastatur
+    trigger.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    menu.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+</script>
