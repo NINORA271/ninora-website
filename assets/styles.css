@@ -25,11 +25,49 @@ header{
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+/* === Nav Pills (einheitlich) === */
+.links { display:flex; gap:12px; align-items:center; }   /* gleichmäßige Abstände */
+
+.pill {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  font-weight: 500;
+  font: inherit;
+  text-decoration: none;
+  color: #1d1d1f;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.pill:hover { background:#f7f7f8; }
+
+/* Dunkle Akzent-Pill (CTA) */
+.pill.accent {
+  background: var(--btn);
+  color: var(--btn-text);
+  border-color: var(--btn);
+}
+.pill.accent:hover { opacity:.92; }
+
+/* Button-Reset für .menu-trigger (damit er wie Link-Pills aussieht) */
+.menu-trigger {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #1d1d1f;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
 .brand-logo{height:80px; display:block}   /* von 56px → 80px */
 @media (max-width:480px){ .brand-logo{height:60px} }   /* von 44px → 60px */
 
 .nav .links a{color:#1d1d1f;margin:0 14px;font-weight:500}
-.nav .links .pill{padding:9px 14px;border:1px solid var(--line);border-radius:999px}
+
 
 /* Hero */
 .hero{padding:86px 0 40px;text-align:center}
@@ -77,28 +115,34 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
 @media(max-width:960px){.two{grid-template-columns:1fr}}
 
 /* === Cards (globale Box-Styles) === */
-:root{
-  /* falls noch nicht vorhanden: einheitlicher Radius */
-  --radius: 18px;
-}
+:root { --radius: 18px; }
 
 .card{
-  background: #fff;
-  border: 1px solid var(--line);
+  background:#fff;
+  border:1px solid var(--line);
   border-radius: var(--radius);
-  padding: 22px;
+  padding:22px;
+  display:flex;            /* NEU */
+  flex-direction:column;   /* NEU */
+  height:100%;             /* NEU */
 }
 
-.card h3{ margin: 8px 0 6px; }
-.card p{ color: var(--muted); }
-
 .mock-card{
-  aspect-ratio:4/3; width:100%;
+  aspect-ratio:4/3;
+  width:100%;
   background:#f5f5f7;
   border:1px solid var(--line);
   border-radius: var(--radius);
   display:grid; place-items:center;
 }
+
+/* Grids sollen die Kinder strecken */
+.features{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; align-items:stretch; } /* NEU: align-items */
+.two{ display:grid; grid-template-columns:1.1fr 1fr; gap:24px; align-items:stretch; } /* NEU: align-items */
+@media(max-width:960px){ .features{grid-template-columns:1fr} .two{grid-template-columns:1fr} }
+
+/* Optional: kleine Infokacheln (proof) gleichmäßig rund */
+.proof{ border-radius: var(--radius); }
 
 /* Über uns Tabelle */
 .about-table{
