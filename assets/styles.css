@@ -129,11 +129,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
 }
 /* === Logo-Größe (Desktop & Mobile) === */
 header .brand img {
-  height: 44px;            /* Desktop */
+  height: 64px;            /* Desktop */
 }
 @media (max-width: 880px) {
   header .brand img {
-    height: 36px;          /* Mobile */
+    height: 48px;          /* Mobile */
   }
 }
 
