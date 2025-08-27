@@ -9,20 +9,28 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="assets/images/logo.png" alt="NINORA Logo" class="brand-logo">
-      </div>
-      <nav class="links" aria-label="Hauptnavigation">
-        <a href="#leistungen" class="pill">Leistungen</a>
-        <a href="#warum" class="pill">Warum NINORA</a>
-        <a href="#ueber" class="pill">Über uns</a>
-        <a href="#kontakt" class="pill">Kontakt</a>
-        <a href="#kontakt" class="pill">Jetzt anfragen</a>
-      </nav>
-    </div>
-  </header>
+ <header>
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="assets/images/logo.png" alt="NINORA Logo">
+    </a>
+
+    <!-- Burger-Button -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Navigationslinks -->
+    <nav id="main-nav" class="links" aria-label="Hauptnavigation">
+      <a href="#leistungen" class="pill">Leistungen</a>
+      <a href="#warum" class="pill">Warum NINORA</a>
+      <a href="#ueber" class="pill">Über uns</a>
+      <a href="#kontakt" class="pill">Kontakt</a>
+      <a href="#kontakt" class="pill">Jetzt anfragen</a>
+    </nav>
+  </div>
+</header>
+
 
   <main>
     <section class="hero container">
@@ -125,5 +133,28 @@
   <footer>
     <div class="container">© 2025 NINORA</div>
   </footer>
+  <script>
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('no-scroll', open);
+    });
+
+    // Klick außerhalb schließt Menü
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('open')) return;
+      if (e.target.closest('.nav') == null) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
