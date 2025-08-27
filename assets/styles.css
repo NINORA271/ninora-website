@@ -48,7 +48,7 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
   background-image: url("images/hero-mock.svg?v=7");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 120% auto;
 
   aspect-ratio: 16 / 9;
   min-height: 520px; /* falls ein alter Browser aspect-ratio ignoriert */
