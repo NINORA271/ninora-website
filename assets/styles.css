@@ -97,3 +97,47 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
   .card { padding: 16px; border-radius: 14px; }
   .two { grid-template-columns: 1fr; gap: 18px; }
 }
+/* === MOBILE NAV FIX: 2-zeilig, zentriert, keine Überlappung === */
+@media (max-width: 880px) {
+  /* Leicht enger und auf mehrere Zeilen erlauben */
+  .nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  /* Link-Leiste zentriert, bricht automatisch um */
+  header .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  /* Pills etwas kompakter, damit sie besser nebeneinander passen */
+  header .links .pill {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* Logo auf Mobile etwas kleiner, damit mehr Platz für die Links bleibt */
+  header .brand img {
+    height: 32px; /* passe gern an (z.B. 36px), wenn noch genug Platz ist */
+  }
+}
+
+/* Sehr schmale Geräte: 2 Spalten, volle Breite je Pill */
+@media (max-width: 420px) {
+  header .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  header .links .pill {
+    width: 100%;
+    text-align: center;
+  }
+}
