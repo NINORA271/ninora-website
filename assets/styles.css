@@ -43,8 +43,8 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
   border:1px solid var(--line);
   border-radius:20px;
   overflow:hidden;
-  background:#fff;
-  display:inline-block;   /* <--- NEU */
+  background:url("assets/images/hero-mock.png") center/contain no-repeat;
+  aspect-ratio: 16/9; /* oder 4/3 je nach Mockup */
 }
 .hero-img{
   display:block;
