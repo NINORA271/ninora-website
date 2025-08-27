@@ -23,8 +23,8 @@ header{
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-.brand-logo{height:56px; display:block}
-@media (max-width:480px){ .brand-logo{height:44px} }
+.brand-logo{height:80px; display:block}   /* von 56px → 80px */
+@media (max-width:480px){ .brand-logo{height:60px} }   /* von 44px → 60px */
 
 .nav .links a{color:#1d1d1f;margin:0 14px;font-weight:500}
 .nav .links .pill{padding:9px 14px;border:1px solid var(--line);border-radius:999px}
