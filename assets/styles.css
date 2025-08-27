@@ -207,3 +207,22 @@ header .brand img {
 
 /* Optional: Desktop-Abstände der Nav leicht anpassen */
 .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+
+/* Hero-Mockup auf Mobile kleiner machen */
+@media (max-width: 768px) {
+  .hero-frame {
+    max-width: 90%;       /* Bild nicht ganz über die volle Breite */
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 100% auto !important; /* statt 140% */
+    min-height: 260px;    /* Höhe reduzieren */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-frame {
+    max-width: 100%;      
+    background-size: 120% auto !important; /* leicht größer für Phones */
+    min-height: 200px;    /* noch kompakter */
+  }
+}
