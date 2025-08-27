@@ -1,108 +1,131 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NINORA – Amazon-Erfolg. Einfach, klar, messbar.</title>
   <meta name="description" content="NINORA hilft Herstellern mit Listings, Amazon Ads und Operations.">
-  <link rel="icon" href="assets/images/logo.png"><link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <div class="brand"><img src="assets/images/logo.png" alt="NINORA Logo" style="height:36px"></div>
-    <nav class="links" aria-label="Hauptnavigation">
-      <a href="#leistungen" class="pill">Leistungen</a>
-      <a href="#warum" class="pill">Warum NINORA</a>
-      <a href="#ueber" class="pill">Über uns</a>
-      <a href="#kontakt" class="pill">Kontakt</a>
-      <a href="#kontakt" class="pill">Jetzt anfragen</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="NINORA Logo" class="brand-logo">
+      </div>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="#leistungen" class="pill">Leistungen</a>
+        <a href="#warum" class="pill">Warum NINORA</a>
+        <a href="#ueber" class="pill">Über uns</a>
+        <a href="#kontakt" class="pill">Kontakt</a>
+        <a href="#kontakt" class="pill">Jetzt anfragen</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="hero container">
-    <h1>Amazon-Erfolg.<br/>Einfach, klar, messbar.</h1>
-    <p class="lead">Wir vermarkten Herstellerprodukte auf Amazon mit präzisem Content, performanten Kampagnen und sauberem operativen Management.</p>
-    <div class="actions">
-      <a class="btn" href="#kontakt">Unverbindliches Gespräch vereinbaren</a>
-      <a class="btn light" href="NINORA_Profil.pdf" target="_blank" rel="noopener">Unternehmensprofil (PDF)</a>
-    </div>
-    <div style="margin-top:30px">
-      <img src="assets/images/hero-mock.svg" alt="Mockup Amazon-Listing auf MacBook & iPhone mit Produkt-Overlay" style="max-width:100%;height:auto;border-radius:20px;border:1px solid var(--line)">
-    </div>
-    <div class="features">
-      <div class="card">
-        <img class="icon" src="assets/images/icon-content.svg" alt="Icon Content">
-        <h3>Produkt-Listing & Content</h3>
-        <p>SEO-optimierte Titel, A+ Content und Bildkonzepte – für mehr Reichweite & Conversion.</p>
-      </div>
-      <div class="card">
-        <img class="icon" src="assets/images/icon-ads.svg" alt="Icon Ads">
-        <h3>Amazon Ads & SEO</h3>
-        <p>Strukturierte Kampagnen, Keyword-Strategie und Automatisierung – auf Marge ausgerichtet.</p>
-      </div>
-      <div class="card">
-        <img class="icon" src="assets/images/icon-ops.svg" alt="Icon Operations">
-        <h3>Account- & Operatives Management</h3>
-        <p>BuyBox, Bestand, Preise & Cases: Wir halten den Betrieb stabil und skalierbar.</p>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section class="hero container">
+      <h1>Amazon-Erfolg.<br>Einfach, klar, messbar.</h1>
+      <p class="lead">
+        Wir vermarkten Herstellerprodukte auf Amazon mit präzisem Content, performanten Kampagnen
+        und sauberem operativen Management.
+      </p>
 
-  <section id="leistungen" class="section container">
-    <h2>Beispiel-Produkt: NINORA® Mulmsauger</h2>
-    <div class="two">
-      <div class="card">
-        <h3>Mulmsauger / Gravel Cleaner</h3>
-        <p class="lead" style="margin:6px 0 12px">Schneller Wasserwechsel & gründliche Bodenreinigung mit komfortablem Schlauchventil.</p>
-        <ul style="margin:0 0 12px 18px">
-          <li>2-in-1: Absaugen & Reinigen in einem Schritt</li>
-          <li>Kontrollierter Durchfluss dank Ventil</li>
-          <li>Sanft zum Bodengrund – schützt Flora & Fauna</li>
-          <li>Einfaches Handling, schnelle Reinigung</li>
-        </ul>
-        <div class="actions" style="justify-content:flex-start">
-          <a class="btn" href="https://www.amazon.de/dp/B0FJJ7NLDC" target="_blank" rel="noopener">Zum Amazon-Listing</a>
-          <a class="btn light" href="#kontakt">Angebot für Hersteller</a>
+      <div class="actions">
+        <a class="btn" href="#kontakt">Unverbindliches Gespräch vereinbaren</a>
+        <a class="btn light" href="NINORA_Profil.pdf" target="_blank" rel="noopener">Unternehmensprofil (PDF)</a>
+      </div>
+
+      <!-- Hero-Mockup: bevorzugt SVG, sonst PNG -->
+      <div class="hero-frame">
+        <picture>
+          <source srcset="assets/images/hero-mock.svg" type="image/svg+xml">
+          <img src="assets/images/hero-mock.png"
+               alt="Amazon-Listing Mockup (Laptop & Smartphone)"
+               class="hero-img">
+        </picture>
+      </div>
+
+      <div class="features">
+        <div class="card">
+          <img class="icon" src="assets/images/icon-content.svg" alt="Icon Content">
+          <h3>Produkt-Listing & Content</h3>
+          <p>SEO-optimierte Titel, A+ Content und Bildkonzepte – für mehr Reichweite & Conversion.</p>
         </div>
-        <p style="color:#6e6e73;margin-top:8px">Hinweis: Details und Verfügbarkeit siehe Amazon-Produktseite.</p>
+        <div class="card">
+          <img class="icon" src="assets/images/icon-ads.svg" alt="Icon Ads">
+          <h3>Amazon Ads & SEO</h3>
+          <p>Strukturierte Kampagnen, Keyword-Strategie und Automatisierung – auf Marge ausgerichtet.</p>
+        </div>
+        <div class="card">
+          <img class="icon" src="assets/images/icon-ops.svg" alt="Icon Operations">
+          <h3>Account- & Operatives Management</h3>
+          <p>BuyBox, Bestand, Preise & Cases: Wir halten den Betrieb stabil und skalierbar.</p>
+        </div>
       </div>
-      <div class="card" style="text-align:center">
-        <div style="aspect-ratio:4/3; width:100%; background:#f5f5f7; border:1px solid var(--line); border-radius:16px; display:grid; place-items:center">
-          <div>
+    </section>
+
+    <section id="leistungen" class="section container">
+      <h2>Beispiel-Produkt: NINORA® Mulmsauger</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Mulmsauger / Gravel Cleaner</h3>
+          <p class="lead" style="margin:6px 0 12px">
+            Schneller Wasserwechsel & gründliche Bodenreinigung mit komfortablem Schlauchventil.
+          </p>
+          <ul style="margin:0 0 12px 18px">
+            <li>2-in-1: Absaugen & Reinigen in einem Schritt</li>
+            <li>Kontrollierter Durchfluss dank Ventil</li>
+            <li>Sanft zum Bodengrund – schützt Flora & Fauna</li>
+            <li>Einfaches Handling, schnelle Reinigung</li>
+          </ul>
+          <div class="actions" style="justify-content:flex-start">
+            <a class="btn" href="https://www.amazon.de/dp/B0FJJ7NLDC" target="_blank" rel="noopener">Zum Amazon-Listing</a>
+            <a class="btn light" href="#kontakt">Angebot für Hersteller</a>
+          </div>
+          <p style="color:#6e6e73;margin-top:8px">Hinweis: Details und Verfügbarkeit siehe Amazon-Produktseite.</p>
+        </div>
+
+        <div class="card" style="text-align:center">
+          <div class="mock-card">
             <p style="margin:0; color:#6e6e73">Produkt-Mockup</p>
-            <p style="margin:6px 0 0"><a href="https://www.amazon.de/dp/B0FJJ7NLDC" target="_blank" rel="noopener">Produkt auf Amazon ansehen</a></p>
+            <p style="margin:6px 0 0">
+              <a href="https://www.amazon.de/dp/B0FJJ7NLDC" target="_blank" rel="noopener">
+                Produkt auf Amazon ansehen
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="ueber" class="section container">
-    <h2>Über uns</h2>
-    <p>„Wir sind erst zufrieden, wenn Ihr Listing performt.“ – Philipp Kuon, Inhaber</p>
-    <table style="width:100%;border-collapse:collapse;margin-top:10px">
-      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 0"><strong>Sitz</strong></td><td>Anne-Frank-Straße 4, 71229 Leonberg, Deutschland</td></tr>
-      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 0"><strong>USt-ID</strong></td><td>DE452202256</td></tr>
-      <tr style="border-bottom:1px solid var(--line)"><td style="padding:8px 0"><strong>Kontakt</strong></td><td><a href="tel:+491627245592">+49 162 724 5592</a> · <a href="mailto:philipp.kuon@ninora.de">philipp.kuon@ninora.de</a></td></tr>
-    </table>
-  </section>
+    <section id="ueber" class="section container">
+      <h2>Über uns</h2>
+      <p>„Wir sind erst zufrieden, wenn Ihr Listing performt.“ – Philipp Kuon, Inhaber</p>
+      <table class="about-table">
+        <tr><td><strong>Sitz</strong></td><td>Anne-Frank-Straße 4, 71229 Leonberg, Deutschland</td></tr>
+        <tr><td><strong>USt-ID</strong></td><td>DE452202256</td></tr>
+        <tr><td><strong>Kontakt</strong></td><td><a href="tel:+491627245592">+49 162 724 5592</a> · <a href="mailto:philipp.kuon@ninora.de">philipp.kuon@ninora.de</a></td></tr>
+      </table>
+    </section>
 
-  <section id="kontakt" class="section container">
-    <h2>Kontakt</h2>
-    <div class="card">
-      <p><strong>Projekt starten?</strong> Schreiben Sie uns kurz Ihr Ziel. Wir melden uns in 1–2 Werktagen.</p>
-      <div class="actions" style="justify-content:flex-start">
-        <a class="btn" href="mailto:philipp.kuon@ninora.de?subject=Erstgespr%C3%A4ch%20NINORA">E-Mail senden</a>
-        <a class="btn light" href="tel:+491627245592">Anrufen</a>
+    <section id="kontakt" class="section container">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p><strong>Projekt starten?</strong> Schreiben Sie uns kurz Ihr Ziel. Wir melden uns in 1–2 Werktagen.</p>
+        <div class="actions" style="justify-content:flex-start">
+          <a class="btn" href="mailto:philipp.kuon@ninora.de?subject=Erstgespr%C3%A4ch%20NINORA">E-Mail senden</a>
+          <a class="btn light" href="tel:+491627245592">Anrufen</a>
+        </div>
+        <p class="small">Keine Formulardaten – Versand direkt über Ihr Mailprogramm.</p>
+        <p class="small"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></p>
       </div>
-      <p class="small">Keine Formulardaten – Versand direkt über Ihr Mailprogramm.</p>
-      <p class="small"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></p>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer><div class="container">© 2025 NINORA</div></footer>
+  <footer>
+    <div class="container">© 2025 NINORA</div>
+  </footer>
 </body>
 </html>
