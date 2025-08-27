@@ -119,3 +119,83 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:#6e6e73;font-size:1
 
   header .brand img { height: 32px; }
 }
+/* === Logo-Größe (Desktop & Mobile) === */
+header .brand img {
+  height: 44px;            /* Desktop */
+}
+@media (max-width: 880px) {
+  header .brand img {
+    height: 36px;          /* Mobile */
+  }
+}
+
+/* === Burger-Button (nur Mobile sichtbar) === */
+.nav-toggle {
+  display: none;           /* Desktop aus */
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.nav-toggle span {
+  position: absolute;
+  left: 10px; right: 10px;
+  height: 2px;
+  background: #1d1d1f;
+  border-radius: 2px;
+  transition: transform .25s ease, top .25s ease, opacity .2s;
+}
+.nav-toggle span:nth-child(1) { top: 14px; }
+.nav-toggle span:nth-child(2) { top: 21px; }
+.nav-toggle span:nth-child(3) { top: 28px; }
+
+/* Button zu X animieren, wenn Menü offen */
+.links.open ~ .nav-toggle,
+.nav-toggle[aria-expanded="true"] { /* fallback */
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+
+/* === Mobile-Menü Panel === */
+@media (max-width: 880px) {
+  .nav { gap: 8px; }
+
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Panel zunächst verstecken */
+  header .links {
+    display: none;
+    position: absolute;
+    top: calc(64px + 8px);      /* unter dem Sticky-Header; passe an falls Header höher */
+    right: 16px;
+    left: 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    padding: 10px;
+    z-index: 100;
+    flex-direction: column;
+    gap: 8px;
+  }
+  header .links.open { display: flex; }
+
+  header .links .pill {
+    display: block;
+    padding: 12px 14px;
+    text-align: center;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  /* Body nicht scrollen, wenn Panel offen */
+  body.no-scroll { overflow: hidden; }
+}
+
+/* Optional: Desktop-Abstände der Nav leicht anpassen */
+.nav { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
