@@ -37,16 +37,23 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
 .btn{padding:14px 22px;border-radius:16px;font-weight:700;border:1px solid var(--line);background:var(--btn);color:var(--btn-text)}
 .btn.light{background:#fff;color:#1d1d1f}
 
-/* Hero-Mockup Rahmen + Bild */
 .hero-frame{
-  margin-top:30px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  overflow:hidden;
-  /* Pfad relativ zur CSS-Datei: images/... */
-  background: #fff url("images/hero-mock.png?v=1") center bottom / 160% auto no-repeat;
-  aspect-ratio: 16/9; /* passt die Höhe automatisch an */
+  margin-top: 30px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+
+  /* WICHTIG: Pfad relativ zur CSS-Datei (assets/styles.css) */
+  background-color: #fff;
+  background-image: url("images/hero-mock.png?v=5") !important;
+  background-position: center bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 160% auto !important;
+
+  aspect-ratio: 16 / 9;
+  min-height: 360px; /* falls ein alter Browser aspect-ratio ignoriert */
 }
+
 .hero-img{
   display:block;
   width:100%;
