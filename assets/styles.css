@@ -232,3 +232,14 @@ header .brand img {
   border-radius:12px; padding:16px; font-weight:700;
 }
 .proof span{display:block; color:var(--muted); font-weight:400}
+
+.form{display:grid; gap:12px}
+.form label{display:grid; gap:6px; font-weight:600}
+.form input,.form textarea{
+  padding:12px 14px; border:1px solid var(--line); border-radius:12px;
+  font:inherit; width:100%; background:#fff;
+}
+.form input:focus,.form textarea:focus{
+  outline:none; border-color:#c9c9cf; box-shadow:0 0 0 3px rgba(0,113,227,.12)
+}
+.form .btn{justify-self:start}
