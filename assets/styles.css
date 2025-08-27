@@ -51,7 +51,7 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
   background-size: contain;
 
   aspect-ratio: 16 / 9;
-  min-height: 420px; /* falls ein alter Browser aspect-ratio ignoriert */
+  min-height: 520px; /* falls ein alter Browser aspect-ratio ignoriert */
 }
 
 .hero-img{
