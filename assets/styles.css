@@ -45,13 +45,13 @@ h1{font-size:clamp(40px,6.2vw,74px);line-height:1.06;margin:0 0 16px;letter-spac
 
   /* WICHTIG: Pfad relativ zur CSS-Datei (assets/styles.css) */
   background-color: #fff;
-  background-image: url("images/hero-mock.svg?v=7") !important;
+  background-image: url("images/hero-mock.svg?v=7") center center / cover no-repeatimportant;
   background-position: center bottom !important;
   background-repeat: no-repeat !important;
   background-size: 160% auto !important;
 
   aspect-ratio: 16 / 9;
-  min-height: 360px; /* falls ein alter Browser aspect-ratio ignoriert */
+  min-height: 420px; /* falls ein alter Browser aspect-ratio ignoriert */
 }
 
 .hero-img{
