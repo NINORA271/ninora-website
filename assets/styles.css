@@ -210,15 +210,14 @@ header .brand img {
 .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
 
 /* Hero-Mockup auf Mobile kleiner machen */
-@media (max-width: 768px) {
-  .hero-frame {
-    max-width: 90%;       /* Bild nicht ganz über die volle Breite */
-    margin-left: auto;
-    margin-right: auto;
-    background-size: 100% auto !important; /* statt 140% */
-    min-height: 260px;    /* Höhe reduzieren */
+@media (max-width: 768px){
+  .hero-frame{
+    aspect-ratio: 16 / 10;       /* etwas flacher */
+    background-size: 90% auto;   /* kleineres Bild auf Mobile */
+    margin-top: 18px;
   }
 }
+
 
 @media (max-width: 480px) {
   .hero-frame {
