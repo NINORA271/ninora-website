@@ -226,3 +226,9 @@ header .brand img {
     min-height: 200px;    /* noch kompakter */
   }
 }
+.proof-row{display:flex;gap:16px;flex-wrap:wrap}
+.proof{
+  flex:1 1 120px; text-align:center; border:1px solid var(--line);
+  border-radius:12px; padding:16px; font-weight:700;
+}
+.proof span{display:block; color:var(--muted); font-weight:400}
